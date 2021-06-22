@@ -10,7 +10,7 @@ const cpusLength = require('os').cpus().length
 app.use('/', express.static('./static'))
 app.use(bodyParser.json())
 
-// DBL webhooks 
+// DBL webhooks
 app.post('/dblwebhook', async (req, res) => {
   if (req.headers.authorization) {
     if (req.headers.authorization === config.webhook_secret) {
